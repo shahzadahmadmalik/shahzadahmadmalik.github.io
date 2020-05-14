@@ -11,5 +11,23 @@
 </head>
 
 <body>
+
+Moodbot with an FAQ
+  
+<div id="webchat"/>
+<script src="https://storage.googleapis.com/mrbot-cdn/webchat-latest.js"></script>
+// Or you can replace latest with a specific version
+<script>
+  WebChat.default.init({
+    selector: "#webchat",
+    initPayload: "/get_started",
+    customData: {"language": "en"}, // arbitrary custom data. Stay minimal as this will be added to the socket
+    socketUrl: "http://mmbots.mercurialminds.com",
+    socketPath: "/socket.io/",
+    title: "Moodbot FAQ",
+    subtitle: "FAQ added to Rasa Moodbot",
+  })
+</script>
+  
 </body>
 </html>
